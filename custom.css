@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: url("./images/card-background.jpg");
+  margin-bottom: 3rem;
+  background-size: cover;
+  background-position: center;
+}
+
 /*Fonts for title Cook with us*/
 .title {
   font-family: "Pacifico", cursive;
