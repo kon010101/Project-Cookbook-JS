@@ -10,18 +10,32 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/minty/bootstrap.min.css"
         integrity="sha384-H4X+4tKc7b8s4GoMrylmy2ssQYpDHoqzPa9aKXbDwPoPUA3Ra8PA5dGzijN+ePnH" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+  <!-- font Awesome for footer icons-->
+    <link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS-->
+
+    <link rel="stylesheet" href="custom.css">
+
+    <title>Cookbook</title>
 </head>
 <body>
+
+    <!--Nav bar-->
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">Cookbook</a>
+    <a class="navbar-brand title" href="home.html">
+        <img src="images\logo.png" alt="CookBook " width="80px"/>Cook with us...</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
         aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarColor01">
-        <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse   justify-content-end " id="navbarColor01">
+        <ul class="navbar-nav  ">
             <li class="nav-item active">
                 <a class="nav-link" href="#">Home
                     <span class="sr-only">(current)</span>
@@ -39,15 +53,52 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
             </li>
-
         </ul>
     </div>
 </nav>
+<!--End of Nav bar-->
+<div class="row d-flex flex-row justify-content-evenly " id="footer">
+    <div class="card col-xs-1 col-md-3 mb-5 mx-auto " style="width: 20rem;">
+         <img src="images\homebreakfast.jpg" class="card-img-top" alt="Breakfast">
+        <div class="card-body">
+            <h2 class="text-center">Breakfast</h2>
+         <p class="card-text text-center "> Say good morning to your body. Eat Breakfast !</p>
+     </div>
+  </div>
 
+    <div class="card col-xs-1 col-md-3 mb-5 mx-auto" style="width: 20rem;">
+    <img src="images\homelunch.jpg" class="card-img-top" alt="Lunch">
+    <div class="card-body">
+        <h2 class="text-center">Lunch</h2>
+      <p class="card-text text-center ">I believe in stopping work and eating lunch ! </p>
+    </div>
+  </div>
 
+     <div class="card col-xs-1 col-md-3 mb-5 mx-auto" style="width: 20rem;">
+      <img src="images\homedinner.jpg" class="card-img-top " alt="Dinner">
+     <div class="card-body">
+        <h2 class="text-center">Dinner</h2>
+      <p class="card-text text-center">Rain or Shine, it's time to dine !</p>
+    </div>
+  </div>
+</div>
 
+<!--Footer-->
 
-
+<footer class="footer bg-primary">
+    <div class="container text-center">
+      <span class="text-white">Copyright &copy; 2020 All Rights Reserved. </span>
+      </ul>
+    </div>
+    <div class="bg-primary row d-flex justify-content-center mx-auto">
+      <i class="fa fa-facebook"></i>
+      <i class="fa fa-twitter"></i>
+      <i class="fa fa-instagram"></i>
+      <i class="fa fa-youtube"></i>
+      <i class="fa fa-github"></i>
+    </div>
+  </footer>
+</div>
 
 
 
