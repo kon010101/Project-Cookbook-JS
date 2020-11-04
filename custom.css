@@ -41,7 +41,7 @@ html {
   font-size: 30px;
   text-align: center;
   width: 100px;
-  border-radius: 50%;
+  border-radius: 15px 50px 30px;
 }
 
 .text-white {
