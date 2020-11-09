@@ -85,3 +85,19 @@ html {
   color: white;
   opacity: 0.7;
 }
+
+.servings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-servings {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+#number-of-servings {
+  font-size: 3rem;
+}
