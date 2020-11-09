@@ -1,8 +1,7 @@
 //read in document elements
-const btnLess = document.querySelector('#btn-less-servings');
-const btnMore = document.querySelector('#btn-more-servings');
+const btnsLess = document.querySelectorAll('.btn-less-servings');
+const btnsMore = document.querySelectorAll('.btn-more-servings');
 // let numOfServings = document.querySelector('#number-of-servings').innerHTML;
-
 
 const getNumOfServings = (tabNum) => {
     return document.querySelector(`#number-of-servings${tabNum}`).innerHTML;
@@ -24,11 +23,31 @@ const getAmounts = (tabNum) => {
 }
 
 //calculate amounts
-const calcAndSetAmounts = (oldServings, newServings, actualAmounts) => {
-
+const calcAmounts = (oldServings, newServings, actualAmounts) => {
+    const newAmounts = actualAmounts.map(amount => {
+        return (amount/oldServings)*newServings;
+    });    
+    return newAmounts;
 }
 
-btnLess.onclick = e => {
+console.log(document.querySelectorAll(`#rec${1} .table .data-amount`)[0].innerHTML);
+
+//set new Amounts to dom elements
+const setNewAmounts = (newAmounts, tableNum) => {
+    for(let i = 0; i < newAmounts.length; i++) {
+        document.querySelectorAll(`#rec${tableNum} .table .data-amount`)[i].innerHTML = newAmounts[i];
+    }
+}
+
+btnsLess.forEach(btn => {
+    btn.addEventListener('click', e => less());
+});
+
+btnsMore.forEach(btn => {
+    btn.addEventListener('click', e => more());
+});
+
+function less() {
     //detect tab and get servings and Amount-array
     const tabNum = getNumOfTab();
     const numOfServingsOld = getNumOfServings(tabNum);
@@ -41,22 +60,20 @@ btnLess.onclick = e => {
     else
         alert('You need to chose at least one serving!');
 
-    calcAndSetAmounts(numOfServingsOld, actualNumOfServings ,getAmounts(tabNum));
+    const newAmounts = calcAmounts(numOfServingsOld, actualNumOfServings ,getAmounts(tabNum));
+    setNewAmounts(newAmounts, tabNum);
 }
 
-btnMore.onclick = e => {
-    numOfServings++;
-    document.querySelector('#number-of-servings').innerHTML = numOfServings;
-    // console.log(amount1[0].innerHTML);
-    console.log(amounts);
+function more() {
+    //detect tab and get servings and Amount-array
+    const tabNum = getNumOfTab();
+    console.log("num of tab: " + tabNum);
+    const numOfServingsOld = getNumOfServings(tabNum);
+    let actualNumOfServings = numOfServingsOld;
 
+    actualNumOfServings++;
+    document.querySelector(`#number-of-servings${tabNum}`).innerHTML = actualNumOfServings;
+    
+    const newAmounts = calcAmounts(numOfServingsOld, actualNumOfServings, getAmounts(tabNum));
+    setNewAmounts(newAmounts, tabNum);
 }
-
-//1. initialize - set variables to default on load up
-
-//2. btn does it all (the buttons detect the tab and set the "servingsvariable" to servings displayed in 
-//current tab and the amounts to displayed amounts in current tab)
-
-//3. add 1 / or minus 1
-
-//4. calculate array with foreach
