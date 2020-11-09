@@ -93,11 +93,21 @@ html {
 }
 
 .btn-servings {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  /* border-radius: 50%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#number-of-servings {
+.num-servings {
   font-size: 3rem;
+}
+
+.recipe-container {
+  background-color: rgba(211, 211, 211, 0.61);
+  border-radius: 10px;
+  border: 2px white solid;
 }
