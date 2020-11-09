@@ -1,7 +1,6 @@
 //read in document elements
 const btnsLess = document.querySelectorAll('.btn-less-servings');
 const btnsMore = document.querySelectorAll('.btn-more-servings');
-// let numOfServings = document.querySelector('#number-of-servings').innerHTML;
 
 const getNumOfServings = (tabNum) => {
     return document.querySelector(`#number-of-servings${tabNum}`).innerHTML;
@@ -30,8 +29,6 @@ const calcAmounts = (oldServings, newServings, actualAmounts) => {
     return newAmounts;
 }
 
-console.log(document.querySelectorAll(`#rec${1} .table .data-amount`)[0].innerHTML);
-
 //set new Amounts to dom elements
 const setNewAmounts = (newAmounts, tableNum) => {
     for(let i = 0; i < newAmounts.length; i++) {
@@ -39,10 +36,12 @@ const setNewAmounts = (newAmounts, tableNum) => {
     }
 }
 
+//add eventlistener for every less-btn in the html
 btnsLess.forEach(btn => {
     btn.addEventListener('click', e => less());
 });
 
+//add eventlistener for every more-btn in the html
 btnsMore.forEach(btn => {
     btn.addEventListener('click', e => more());
 });
@@ -67,7 +66,6 @@ function less() {
 function more() {
     //detect tab and get servings and Amount-array
     const tabNum = getNumOfTab();
-    console.log("num of tab: " + tabNum);
     const numOfServingsOld = getNumOfServings(tabNum);
     let actualNumOfServings = numOfServingsOld;
 
