@@ -92,18 +92,26 @@ html {
   align-items: center;
 }
 
+.servings > span {
+  font-size: 2rem;
+  margin-right: 15px;
+}
+
 .btn-servings {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.4rem;
+  height: 2.4rem;
   font-size: 1rem;
   /* border-radius: 50%; */
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 10px;
 }
 
 .num-servings {
-  font-size: 3rem;
+  font-size: 2rem;
+  width: 2rem;
+  text-align: center;
 }
 
 .recipe-container {
