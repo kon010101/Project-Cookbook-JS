@@ -1,9 +1,12 @@
 /* Standard page setting do not change*/
-* {
+
+/*THIS PART SHALL BE REMOVED AS IT DOESNT HELP MUCH AND MESSES A BIT WITH THE NEW CSS CODE
+ *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+*/
 
 body {
   background-image: url("./images/card-background.jpg");
@@ -28,6 +31,18 @@ body {
   font-family: "Satisfy", cursive;
   font-size: 22px;
 }
+
+.nav-link {
+  font-family: "Pacifico", cursive;
+  font-size: 24px;
+}
+
+.nav-item {
+  padding-left: 22px;
+}
+
+/*APPLYING MY FONT FOR THE NAV ITEMS. CAN BE REMOVED IF YOU DONT LIKE IT.
+
 
 /* Footer */
 
@@ -93,13 +108,15 @@ html {
 }
 
 .servings > span {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-right: 15px;
+  color: rgb(95, 93, 93);
+  font-family: "Satisfy", cursive;
 }
 
 .btn-servings {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2rem;
+  height: 2rem;
   font-size: 1rem;
   /* border-radius: 50%; */
   display: flex;
@@ -118,4 +135,43 @@ html {
   background-color: rgba(211, 211, 211, 0.61);
   border-radius: 10px;
   border: 2px white solid;
+}
+
+
+/************************************* MAIN **************************************/
+
+/*****************THIS CODE DOESNT MESS WITH MY BOOTSTRAP, I CHECKED*****************/
+
+
+
+.nav-item {
+  padding: 5px;
+}
+
+.nav-link {
+  padding: 9px;
+}
+
+.text-center {
+color: rgb(95, 93, 93);
+}
+
+th {
+color: rgb(95, 93, 93);
+}
+
+td {
+color: rgb(95, 93, 93);
+}
+
+ul {
+color: rgb(95, 93, 93);
+}
+
+.text-capitalize {
+  text-align: center;
+}
+
+.table {
+  width: 390px;
 }
