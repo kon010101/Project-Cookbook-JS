@@ -1,4 +1,4 @@
-//read in document elements
+//read in document elements for all +/- buttons
 const btnsLess = document.querySelectorAll('.btn-less-servings');
 const btnsMore = document.querySelectorAll('.btn-more-servings');
 
@@ -14,7 +14,7 @@ const getNumOfTab = () => {
     return num;
 }
 
-//get NodeArray
+//get NodeArray and return amounts of units
 const getAmounts = (tabNum) => {
     const amountNodes = document.querySelectorAll(`#rec${tabNum} .table .data-amount`);
     const amounts = Array.from(amountNodes, obj => obj.innerHTML);
@@ -46,6 +46,7 @@ btnsMore.forEach(btn => {
     btn.addEventListener('click', e => more());
 });
 
+//events on btn click
 function less() {
     //detect tab and get servings and Amount-array
     const tabNum = getNumOfTab();
