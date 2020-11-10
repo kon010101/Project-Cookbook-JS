@@ -85,3 +85,37 @@ html {
   color: white;
   opacity: 0.7;
 }
+
+.servings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.servings > span {
+  font-size: 2rem;
+  margin-right: 15px;
+}
+
+.btn-servings {
+  width: 2.4rem;
+  height: 2.4rem;
+  font-size: 1rem;
+  /* border-radius: 50%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.num-servings {
+  font-size: 2rem;
+  width: 2rem;
+  text-align: center;
+}
+
+.recipe-container {
+  background-color: rgba(211, 211, 211, 0.61);
+  border-radius: 10px;
+  border: 2px white solid;
+}
