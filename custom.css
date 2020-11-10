@@ -1,18 +1,19 @@
 /* Standard page setting do not change*/
 
-/*THIS PART SHALL BE REMOVED AS IT DOESNT HELP MUCH AND MESSES A BIT WITH THE NEW CSS CODE
+/*THIS PART SHALL BE REMOVED AS IT DOESNT HELP MUCH AND MESSES A BIT WITH THE NEW CSS CODE*/
  *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-*/
+
 
 body {
   background-image: url("./images/card-background.jpg");
   margin-bottom: 3rem;
   background-size: cover;
   background-position: center;
+  
 }
 
 /*Fonts for title Cook with us*/
@@ -20,6 +21,8 @@ body {
   font-family: "Pacifico", cursive;
   font-size: 40px;
 }
+
+/* Home page styles*/
 
 .card {
   padding: 0 !important;
@@ -33,12 +36,12 @@ body {
 }
 
 .nav-link {
-  font-family: "Pacifico", cursive;
-  font-size: 24px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.nav-item {
-  padding-left: 22px;
+/*.nav-item {
+  padding-left: 20px;
 }
 
 /*APPLYING MY FONT FOR THE NAV ITEMS. CAN BE REMOVED IF YOU DONT LIKE IT.
@@ -111,7 +114,7 @@ html {
   font-size: 1.5rem;
   margin-right: 15px;
   color: rgb(95, 93, 93);
-  font-family: "Satisfy", cursive;
+  
 }
 
 .btn-servings {
@@ -131,18 +134,19 @@ html {
   text-align: center;
 }
 
-.recipe-container {
+/*.recipe-container {
   background-color: rgba(211, 211, 211, 0.61);
   border-radius: 10px;
   border: 2px white solid;
-}
+}*/
+
 
 
 /************************************* MAIN **************************************/
 
 /*****************THIS CODE DOESNT MESS WITH MY BOOTSTRAP, I CHECKED*****************/
 
-
+/*
 
 .nav-item {
   padding: 5px;
@@ -173,5 +177,16 @@ color: rgb(95, 93, 93);
 }
 
 .table {
-  width: 390px;
+  width: 380px;
+} */
+
+/*** ABOUT PAGE***/
+.repo{
+  padding: 0;
+  margin: 0;
+  text-align: justify;
+  font-size: 25px;
 }
+
+
+
