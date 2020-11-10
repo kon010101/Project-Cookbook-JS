@@ -3,7 +3,7 @@ const btnsLess = document.querySelectorAll('.btn-less-servings');
 const btnsMore = document.querySelectorAll('.btn-more-servings');
 
 const getNumOfServings = (tabNum) => {
-    return document.querySelector(`#number-of-servings${tabNum}`).innerHTML;
+    return document.querySelectorAll(".num-servings")[tabNum-1].innerHTML;
 }
 
 //detect tab
@@ -24,7 +24,7 @@ const getAmounts = (tabNum) => {
 //calculate amounts
 const calcAmounts = (oldServings, newServings, actualAmounts) => {
     const newAmounts = actualAmounts.map(amount => {
-        return (amount/oldServings)*newServings;
+        return Number.parseFloat((amount / oldServings) * newServings).toFixed(2);
     });    
     return newAmounts;
 }
@@ -55,7 +55,7 @@ function less() {
 
     if (actualNumOfServings > 1) {
         actualNumOfServings--;
-        document.querySelector(`#number-of-servings${tabNum}`).innerHTML = actualNumOfServings;
+        document.querySelectorAll(".num-servings")[tabNum - 1].innerHTML = actualNumOfServings;
     }
     else
         alert('You need to chose at least one serving!');
@@ -71,7 +71,7 @@ function more() {
     let actualNumOfServings = numOfServingsOld;
 
     actualNumOfServings++;
-    document.querySelector(`#number-of-servings${tabNum}`).innerHTML = actualNumOfServings;
+    document.querySelectorAll(".num-servings")[tabNum - 1].innerHTML = actualNumOfServings;
     
     const newAmounts = calcAmounts(numOfServingsOld, actualNumOfServings, getAmounts(tabNum));
     setNewAmounts(newAmounts, tabNum);
