@@ -81,18 +81,8 @@ if (filename === 'index.html') {
         }
     }
 
-    //add eventlistener for every less-btn in the html
-    btnsLess.forEach(btn => {
-        btn.addEventListener('click', e => less());
-    });
-
-    //add eventlistener for every more-btn in the html
-    btnsMore.forEach(btn => {
-        btn.addEventListener('click', e => more());
-    });
-
     //events on btn click
-    function less() {
+    const less = () => {
         //detect tab and get servings and Amount-array
         const tabNum = getNumOfTab();
         const numOfServingsOld = getNumOfServings(tabNum);
@@ -109,7 +99,7 @@ if (filename === 'index.html') {
         setNewAmounts(newAmounts, tabNum);
     }
 
-    function more() {
+    const more = () => {
         //detect tab and get servings and Amount-array
         const tabNum = getNumOfTab();
         const numOfServingsOld = getNumOfServings(tabNum);
@@ -124,6 +114,15 @@ if (filename === 'index.html') {
         setNewAmounts(newAmounts, tabNum);
     }
 
+    //add eventlistener for every less-btn in the html
+    btnsLess.forEach(btn => {
+        btn.addEventListener('click', e => less());
+    });
+
+    //add eventlistener for every more-btn in the html
+    btnsMore.forEach(btn => {
+        btn.addEventListener('click', e => more());
+    });
 
     ///////share buttons
     // Select all buttons
