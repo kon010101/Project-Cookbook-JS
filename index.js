@@ -115,12 +115,12 @@ if (filename === 'index.html') {
 
     //add eventlistener for every less-btn in the html
     btnsLess.forEach(btn => {
-        btn.addEventListener('click', e => less());
+        btn.addEventListener('click', less);
     });
 
     //add eventlistener for every more-btn in the html
     btnsMore.forEach(btn => {
-        btn.addEventListener('click', e => more());
+        btn.addEventListener('click', more);
     });
 
     ///////share buttons
