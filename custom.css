@@ -28,6 +28,7 @@ body {
   padding: 0 !important;
   margin-top: 150px;
   height: fit-content;
+  overflow: hidden;
 }
 
 .card-text {
@@ -132,6 +133,48 @@ html {
   font-size: 2rem;
   width: 2rem;
   text-align: center;
+}
+
+/******************** Animation Landing Page *****************************/
+.transition {
+  transition: 600ms;
+}
+
+.card-img-move {
+  transform: translateY(-100%);
+}
+
+.recipe-list {
+  position: absolute;
+  font-size: 2rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  color: #888;
+}
+
+.recipe-list li {
+  opacity: 0;
+}
+
+.ul-hide {
+  display: none;
+}
+
+@keyframes recipeListFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
 /*.recipe-container {
