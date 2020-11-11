@@ -1,7 +1,6 @@
 const url = window.location.pathname;
 const filename = url.substring(url.lastIndexOf('/') + 1);
 
-
 //load just if index.html
 if (filename === 'index.html') {
 
@@ -133,7 +132,7 @@ if (filename === 'index.html') {
     shareButtons.forEach((button) => {
         button.addEventListener('click', () => {
             const tabNum = getNumOfTab();
-            const recipe = document.querySelector(`#rec${tabNum} h3`).innerHTML;
+            const recipe = document.querySelector(`#rec${tabNum} h3`).innerText;
             alert(`Thank you for Sharing the ${recipe}!`);
         });
     });
